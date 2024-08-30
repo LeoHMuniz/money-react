@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+//Green
+$green-dark: #015f43;
+$green: #00875f;
+$green-light: #00b37e;
+//Red
+$red-dark: #aa2834;
+$red: #f75a68;
+//Gray
+$gray1: #121214;
+$gray2: #202024;
+$gray3: #29292e;
+$gray4: #323238;
+$gray5: #7c7c8a;
+$gray6: #c4c4cc;
+$gray7: #e1e1e6;
+$white: #fff;
+
+//Components
+
+@mixin input() {
+    margin: 0 8px;
+    padding: 16px;
+    background-color: $gray1;
+
+    active {
+        outline: 1px solid $green-light;
+        color: $gray6;
+    }
+
+    error {
+        outline: 1px solid $red;
+        color: $gray6;
+    }
+}
+
+@mixin selectionButton() {
+    margin: 0 8px;
+    padding: 16px 24px;
+    background-color: $gray3;
+    color: $gray6;
+
+    selected {
+        color: $white;
+    }
+
+    in {
+        background-color: $green-dark;
+    }
+
+    out {
+        background-color: $red-dark;
+    }
+}
+
+@mixin btn {
+    background-color: $green-dark;
+    border-radius: 6px;
+    margin: 10px;
+
+    :hover{
+        background-color: $green;
+    }
+
+    .sm {
+        padding: 8px 16px;
+    }
+
+    .md {
+        padding: 12px 20px;
+    }
+
+    .lg {
+        padding: 16px 32px;
+    }
+
+}
