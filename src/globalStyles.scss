@@ -3,6 +3,13 @@
     src: url(./assets/fonts/Roboto-Regular.ttf);
 }
 
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 //Green
 $green-dark: #015f43;
 $green: #00875f;
@@ -22,60 +29,107 @@ $white: #fff;
 
 //Components
 
-@mixin input() {
-    margin: 0 8px;
+.input {
     padding: 16px;
     background-color: $gray1;
+    border: none;
+    border-radius: 6px;
+    color:$gray6;
 
-    active {
-        outline: 1px solid $green-light;
-        color: $gray6;
+    &::placeholder{
+        color:$gray5;
     }
 
-    error {
+    &:active {
+        outline: 1px solid $green-light;
+    }
+
+    &.error {
         outline: 1px solid $red;
-        color: $gray6;
+    }
+    &:focus {
+        outline: 1px solid $green-light;
     }
 }
 
-@mixin selectionButton() {
+.selectionButton {
     margin: 0 8px;
     padding: 16px 24px;
     background-color: $gray3;
     color: $gray6;
 
-    selected {
+    &.selected {
         color: $white;
     }
 
-    in {
+    &.in {
         background-color: $green-dark;
     }
 
-    out {
+    &.out {
         background-color: $red-dark;
     }
 }
 
-@mixin btn {
-    background-color: $green-dark;
+.search {
+    background-color: transparent;
+    outline: 1px solid $green-light;
     border-radius: 6px;
-    margin: 10px;
+    color: $green-light;
+    border: none;
 
-    :hover{
-        background-color: $green;
+    &:hover {
+        background-color: $green-light;
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+.btn {
+    background-color: $green;
+    border: 1px solid $green;
+    border-radius: 6px;
+    color: $white;
+
+    &:hover {
+        background-color: $green-light;
+        border-color: $green-light;
     }
 
-    .sm {
+    &.sm {
         padding: 8px 16px;
     }
 
-    .md {
+    &.md {
         padding: 12px 20px;
     }
 
-    .lg {
+    &.lg {
         padding: 16px 32px;
     }
-
 }
+
+//Font - 14,16,20,24,32 //Regular and bold
+
+.headNumbers {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 160%;
+    color: $gray7;
+}
+
+.title {
+    font-size: 1.6rem;
+    line-height: 160%;
+    color: $gray7;
+}
+
+//<ArrowCircleUp size={32} />
+//<ArrowCircleDown size={32} />
+//<CurrencyDollar size={32} />
+//<X size={32} />
+//<TagSimple size={32} />
+//<CalendarBlank size={32} />
+//<CaretRight size={32} />
+//<CaretRight size={32} />
+//<MagnifyingGlass size={32} />

@@ -1,0 +1,38 @@
+@import "../globalStyles.scss";
+
+.overviewContainer {
+    margin-top:50px;
+    display: flex;
+    height: 130px;
+    gap: 32px;
+
+    .overviewCards {
+        display: flex;
+        border-radius: 6px;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1;
+        background-color: $gray4;
+        padding:24px 24px 24px 32px;
+
+        .overviewCardsTitle {
+            display: flex;
+            justify-content: space-between;
+            span{
+                color:$gray6;
+            }
+
+            .icon{
+                &.green{
+                    color:$green-light;
+                }
+                &.red{
+                    color:$red;
+                }
+                &.white{
+                    color:$white;
+                }
+            }
+        }
+    }
+}

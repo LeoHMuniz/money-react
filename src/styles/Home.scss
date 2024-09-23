@@ -1,0 +1,27 @@
+@import '../globalStyles.scss';
+
+.homeContainer{
+    margin-top:-180px;
+    z-index: 10;
+    align-items: center;
+
+    .homeHeader{
+        height: 50px;
+        display:flex;
+        justify-content: space-between;
+        position:relative;
+
+        div{
+            justify-content: space-between;
+            display:flex;
+        }
+
+        .btn{
+            height: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            display:flex;
+            align-items: center;
+        }
+    }
+}
