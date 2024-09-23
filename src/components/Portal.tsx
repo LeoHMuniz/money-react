@@ -1,3 +1,4 @@
+import { ArrowCircleDown, ArrowCircleUp } from "phosphor-react"
 import "../styles/Portal.scss"
 
 export default function Portal() {
@@ -13,8 +14,8 @@ export default function Portal() {
                         <input type="text" placeholder="Categoria" />
                     </div>
                     <div className="portalButtonDiv">
-                        <button className="buttonIn">Entrada</button>
-                        <button className="buttonOut">Saída</button>
+                        <button className="buttonIn"><ArrowCircleUp size={18} />Entrada</button>
+                        <button className="buttonOut"><ArrowCircleDown size={18} />Saída</button>
                     </div>
                     <button className="portalSignIn">
                         Cadastrar

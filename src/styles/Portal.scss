@@ -15,15 +15,17 @@
         flex: 1;
         padding: 10px 20px;
         border-radius: 4px;
+        background-color: $gray4;
+        color:$gray6;
     }
 
     .portalWrapper {
-        width: 40vw;
+        width: 23rem;
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding:30px;
         gap: 20px;
-        background-color: red;
+        background-color: $gray2;
         border-radius: 4px;
 
         h1 {
@@ -38,7 +40,7 @@
 
             input {
                 width: 100%;
-                padding: 8px;
+                padding: 12px;
                 border-radius: 6px;
                 background-color: $gray1;
                 color: gray4;
@@ -50,14 +52,21 @@
             display: flex;
             gap: 8px;
 
-            .buttonOut {
-                :hover{
+            button{
+                display:flex;
+                text-align: center;
+                justify-content: center;
+                gap:4px;
+            }
 
+            .buttonOut {
+                &:hover{
+                    background-color: $red-dark;
                 }
             }
             .buttonIn {
-                :hover{
-                    
+                &:hover{
+                    background-color: $green-dark;
                 }
             }
         }
