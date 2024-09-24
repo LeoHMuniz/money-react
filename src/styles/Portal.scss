@@ -1,6 +1,7 @@
 @import "../globalStyles.scss";
 
 .PortalContainer {
+    z-index: 10;
     inset: 0;
     position: fixed;
     display: flex;
@@ -9,26 +10,40 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
 
+    .Closer {
+        margin: 0;
+        padding: 0;
+    }
+
     button {
         border: none;
         outline: none;
         flex: 1;
-        padding: 10px 20px;
+        padding: 12px 20px;
         border-radius: 4px;
-        background-color: $gray4;
-        color:$gray6;
+        background-color: $gray3;
+        color: $gray6;
     }
 
     .portalWrapper {
         width: 23rem;
         display: flex;
         flex-direction: column;
-        padding:30px;
+        padding: 30px;
         gap: 20px;
         background-color: $gray2;
         border-radius: 4px;
+        position: absolute;
 
-        h1 {
+        .portalCloser {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: $white;
+            cursor: pointer;
+        }
+
+        .portalTitle {
             color: $gray7;
         }
 
@@ -39,6 +54,7 @@
             gap: 10px;
 
             input {
+                color: $gray6;
                 width: 100%;
                 padding: 12px;
                 border-radius: 6px;
@@ -46,29 +62,54 @@
                 color: gray4;
                 outline: none;
                 border: none;
+                &:focus {
+                    outline: $gray7 1px solid;
+                }
             }
         }
         .portalButtonDiv {
             display: flex;
             gap: 8px;
 
-            button{
-                display:flex;
+            button {
+                display: flex;
                 text-align: center;
                 justify-content: center;
-                gap:4px;
+                gap: 4px;
+                &:hover {
+                    background-color: $gray4;
+                }
+                &.selected {
+                    color: $white;
+                    .arrow {
+                        color: $white;
+                    }
+                }
             }
 
             .buttonOut {
-                &:hover{
+                .arrow {
+                    color: $red;
+                }
+                &.selected {
                     background-color: $red-dark;
                 }
             }
             .buttonIn {
-                &:hover{
-                    background-color: $green-dark;
+                .arrow {
+                    color: $green-light;
+                }
+                &.selected {
+                    background-color: $green-light;
                 }
             }
+        }
+
+        .portalSignIn {
+            width: 100%;
+            margin: 0;
+            background-color: $green-light;
+            color: $white;
         }
     }
 }

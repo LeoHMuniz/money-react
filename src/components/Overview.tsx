@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../styles/Overview.scss';
 import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from 'phosphor-react';
+import { transactionContext } from '../defaultLayout/DefaultLayout';
 
 export default function Overview() {
+
+    const [transactions, setTransactions] = useContext(transactionContext);
 
 
     const overviewItems =
@@ -31,7 +34,7 @@ export default function Overview() {
 
 
     return (
-        <section className="overviewContainer">
+        <section className="overviewContainer" onClick={() => console.log(transactions)}>
             {
                 overviewItems.map((actualOverView, index) => {
                     return (
