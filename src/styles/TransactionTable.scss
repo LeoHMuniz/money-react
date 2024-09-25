@@ -6,12 +6,5 @@
     flex-direction: column;
     gap: 8px;
 
-    .TransactionItem {
-        display: flex;
-        justify-content: space-between;
-        color: $gray6;
-        padding: 20px 32px;
-        background-color: $gray2;
-        border-radius: 5px;
-    }
+
 }

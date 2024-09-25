@@ -1,0 +1,32 @@
+@import "../globalStyles.scss";
+
+.TransactionItem {
+    display: flex;
+    justify-content: space-between;
+    color: $gray6;
+    padding: 20px 32px;
+    background-color: $gray2;
+    border-radius: 5px;
+    gap: 30px;
+    text-align: left;
+
+    div {
+        flex: 1;
+    }
+
+    .dateItem {
+        text-align: right;
+    }
+
+    .entryStyle {
+        color: $green-light;
+    }
+
+    .exitStyle {
+        color: $red;
+
+        &::before {
+            content: "- ";
+        }
+    }
+}

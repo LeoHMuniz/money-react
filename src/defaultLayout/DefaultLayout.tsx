@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 export type transaction = {
     name: string,
-    price: string,
+    price: number,
     category: string,
     type: string,
     date: Date,

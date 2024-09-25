@@ -40,7 +40,7 @@ export default function Portal() {
                     <Dialog.Title className="portalTitle">Nova transação</Dialog.Title>
                     <form className="portalInputDiv" >
                         <input placeholder="Descrição" onChange={(e) => (newTransaction.name = e.target.value)} />
-                        <input type="number" placeholder="Valor" onChange={(e) => (newTransaction.price = `R$ ${parseFloat(e.target.value).toFixed(2)}`)} />
+                        <input type="number" placeholder="Valor" onChange={(e) => (newTransaction.price = parseFloat(e.target.value))} />
                         <input type="text" placeholder="Tipo de gasto" onChange={(e) => (newTransaction.type = e.target.value)} />
                         <input type="date" onChange={(e) => (newTransaction.date = e.target.value.replace(/-/g, "/"))} />
                     </form>
