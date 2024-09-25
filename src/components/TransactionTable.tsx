@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import '../styles/TransactionTable.scss'
 import { transactionContext } from '../defaultLayout/DefaultLayout'
 import { transaction } from '../defaultLayout/DefaultLayout';
+import TransactionItem from './TransactionItem';
 
 export default function TransactionTable() {
 
@@ -9,17 +10,20 @@ export default function TransactionTable() {
     const [transactions] = useContext(transactionContext);
 
     return (
-        <section className="TransactionTableContainer">
+        <section className="TransactionTableContainer" onClick={() => console.log(transactions)}>
 
-            {transactions.map((transaction: transaction, index: number) => {
-                <div className="TransactionItem" key={index}>
-                    <span className="TransactionItemName">{transaction.name}</span>
-                    <span>{transaction.price}</span>
-                    <span></span>
+            {
+                transactions.map((transaction: transaction, index: number) => {
+                    return (
+                        <TransactionItem transaction={transaction} index={index} />
+                        // <div className="TransactionItem" key={index} onClick={() => console.log(index)}>
+                        //     <span className="TransactionItemName">{transaction.name}</span>
+                        //     <span>{transactions[index].price}</span>
+                        //     <span>{transactions[index].type}</span>
+                        // </div>
+                    )
 
-                </div>
-
-            })}
+                })}
 
 
 

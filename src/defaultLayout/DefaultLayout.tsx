@@ -7,6 +7,8 @@ export type transaction = {
     name: string,
     price: string,
     category: string,
+    type: string,
+    date: Date,
 }
 
 const transactions: Array<transaction> = [];

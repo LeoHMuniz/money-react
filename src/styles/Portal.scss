@@ -50,6 +50,7 @@
         .portalInputDiv {
             display: flex;
             flex: column;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 10px;
 
@@ -70,9 +71,11 @@
         .portalButtonDiv {
             display: flex;
             gap: 8px;
+            width: 100%;
 
             button {
                 display: flex;
+                flex:1;
                 text-align: center;
                 justify-content: center;
                 gap: 4px;
