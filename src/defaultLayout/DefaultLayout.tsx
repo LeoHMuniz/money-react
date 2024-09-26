@@ -12,21 +12,26 @@ export type transaction = {
 }
 
 const transactions: Array<transaction> = [];
+const searchItem: string = "";
 
 export const transactionContext = React.createContext();
+export const searchContext = React.createContext();
 
 export default function DefaultLayout() {
 
     const [transactionList, setTransactionList] = useState(transactions);
+    const [search, setSearch] = useState(searchItem);
 
     return (
         <transactionContext.Provider value={[transactionList, setTransactionList]}>
-            <section className="DefaultLayoutContainer">
-                <Header />
-                <main className="DefaultLayout">
-                    <Outlet />
-                </main>
-            </section>
+            <searchContext.Provider value={[search, setSearch]}>
+                <section className="DefaultLayoutContainer">
+                    <Header />
+                    <main className="DefaultLayout">
+                        <Outlet />
+                    </main>
+                </section>
+            </searchContext.Provider>
         </transactionContext.Provider>
     )
 }

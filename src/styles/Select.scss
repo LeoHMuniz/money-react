@@ -1,0 +1,32 @@
+@import "../globalStyles.scss";
+
+.SelectContainer {
+    width: 130px;
+    background-color: $gray1;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: $gray6;
+    &:hover{
+        background-color: $gray2;
+    }
+}
+
+.SelectContent {
+    padding:10px;
+    width: 130px;
+    border-radius: 6px;
+    margin: 2px 0;
+    background-color: $gray1;
+    text-align: left;
+    color:$gray6;
+}
+.SelectItem {
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 6px;
+    &:hover{
+        background-color: $gray2;
+    }
+
+}

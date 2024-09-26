@@ -21,12 +21,16 @@ export default function Portal() {
             setSelectedButton(2)
             newTransaction.category = 'Gasto';
         }
+        if (id == 0){
+            setSelectedButton(0);
+        }
     }
 
     function getDataFromTransaction() {
 
         setTransaction((prev: transaction) => [...prev, newTransaction]);
-        setNewTransaction({})
+        setNewTransaction({});
+        selectThis(0);
 
     }
 
